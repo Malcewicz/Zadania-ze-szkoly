@@ -1,0 +1,28 @@
+	ZADANIA
+1. Utwórz zapytanie wypisujące rok, miesiąc, zwracające informację ile książek zostało wypożyczonych, w podziale na lata i miesiące.
+2. Wypisz Id książek które były wypożyczane, ale aktualnie nie znajdują się w tabeli książki
+3. Wypisz tytuł książki, autora ( imię i nazwisko) oraz wydawnictwo, jakie wydało książkę
+4. Wypisz ile różnych książek wypożyczył każdy z czytelników
+5. Wypisz czytelników (imię i nazwisko), które przeczytali przynajmniej jedną książkę w ciągu miesiąca
+
+	ODPOWIEDZI
+1. SELECT year(data_wypozyczenia) AS 'rok wypożyczenia', month(data_wypozyczenia) AS 'miesiąc wypożyczenia', count(*) AS 'ilość książek' FROM wypozyczenia GROUP BY month(data_wypozyczenia); 
+2. SELECT id_ksiazka FROM wypozyczenia LEFT JOIN ksiazki ON id_ksiazka = ksiazki.id WHERE ksiazki.id IS NULL; 
+3. SELECT tytul, imie, nazwisko, nazwa FROM autorzy INNER JOIN ksiazki ON autorzy.id = ksiazki.id_autor INNER JOIN wydawnictwa ON wydawnictwa.id = ksiazki.id_wydawnictwo;
+4. SELECT imie, nazwisko, count(id_ksiazka) AS 'ilosc książek' FROM czytelnicy INNER JOIN wypozyczenia ON czytelnicy.id = wypozyczenia.id_czytelnik GROUP BY id_czytelnik; 
+5. SELECT imie, nazwisko FROM czytelnicy INNER JOIN wypozyczenia ON czytelnicy.id = wypozyczenia.id_czytelnik WHERE datediff(data_oddania, data_wypozyczenia) < 30 GROUP BY id_czytelnik; 
+
+	ZADANIA
+6. Wypisz imię i nazwisko autora najczęściej czytanego tzn. którego książki są najczęściej wypożyczane.
+7. Wypisz tytuły książek i daty wypożyczenia, które są nadal wypożyczone.
+8. Wypisz tytuły książek najczęściej wypożyczane.
+9. Dla każdego czytelnika (imię i nazwisko) wypisz ulubionego autora (imię i nazwisko) - ulubiony autor to autor,
+którego książki są najczęściej czytane przez danego czytelnika.
+10. Wypisz ile książek przeczytał każdy z czytelników
+
+	ODPOWIEDZI
+6. SELECT imie, nazwisko, count(id_ksiazka) as 'ilość wypożyczeń' FROM autorzy INNER JOIN ksiazki ON autorzy.id = ksiazki.id_autor INNER JOIN wypozyczenia ON wypozyczenia.id_ksiazka = ksiazki.id GROUP BY id_ksiazka ORDER BY count(id_ksiazka) DESC LIMIT 1; 
+7. SELECT tytul, data_wypozyczenia from wypozyczenia INNER JOIN ksiazki ON wypozyczenia.id_ksiazka = ksiazki.id WHERE data_oddania IS NULL; 
+8. SELECT tytul, count(id_ksiazka) as 'ilość wypożyczeń' FROM ksiazki INNER JOIN wypozyczenia ON wypozyczenia.id_ksiazka = ksiazki.id GROUP BY id_ksiazka ORDER BY count(id_ksiazka) DESC; 
+9. SELECT cz.imie, cz.nazwisko, au.imie, au.nazwisko FROM czytelnicy as cz INNER JOIN wypozyczenia as wy ON wy.id_czytelnik = cz.id INNER JOIN ksiazki as ks ON ks.id = wy.id_ksiazka INNER JOIN autorzy as au ON au.id = ks.id_autor GROUP BY cz.nazwisko;
+10. SELECT imie, nazwisko, count(id_ksiazka) AS 'ilosc książek' FROM czytelnicy INNER JOIN wypozyczenia ON czytelnicy.id = wypozyczenia.id_czytelnik GROUP BY id_czytelnik; 
