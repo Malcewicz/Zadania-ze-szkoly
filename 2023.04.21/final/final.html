@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator systemów liczbowych</title>
+    <link rel="stylesheet" href="finalstyle.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Kalkulator systemów liczbowych</h1>
+      <p id="subtitle">
+        Narzędzie do konwertowania liczb naturalnych z dowolnego systemu
+        liczbowego do innego wybranego systemu
+      </p>
+      <div id="container">
+        <label for="number">Wpisz liczbę, którą chcesz przeliczyć:</label>
+        <input
+          type="text"
+          name="number"
+          id="number"
+          oninput="Przelicz()"
+          placeholder="twoja liczba"
+        />&thinsp; <label for="system"> z systemu</label>&thinsp;
+        <select name="system" id="system">
+          <option value="2">binarnego</option>
+          <option value="3">trójkowego</option>
+          <option value="4">czwórkowego</option>
+          <option value="5">piątkowego</option>
+          <option value="6">szóstkowego</option>
+          <option value="7">siódemkowego</option>
+          <option value="8">ósemkowego</option>
+          <option value="9">dziewiątkowego</option>
+          <option value="10">dziesiętnego</option>
+          <option value="11">jedenastkowego</option>
+          <option value="12">dwunastkowego</option>
+          <option value="13">trzynastkowego</option>
+          <option value="14">czternastkowego</option>
+          <option value="15">piętnastkowego</option>
+          <option value="16">szesnastkowego</option>
+        </select>
+        <br />
+      </div>
+      <div id="secondContainer">
+        <label for="output">Wynik</label>&thinsp;
+        <span><input type="textbox" name="output" id="output" readonly /></span>
+        <label for="system"> w systemie</label>&thinsp;
+        <select name="system" id="systemDrugi">
+          <option value="2">binarnym</option>
+          <option value="3">trójkowym</option>
+          <option value="4">czwórkowym</option>
+          <option value="5">piątkowym</option>
+          <option value="6">szóstkowym</option>
+          <option value="7">siódemkowym</option>
+          <option value="8">ósemkowym</option>
+          <option value="9">dziewiątkowym</option>
+          <option value="10">dziesiętnym</option>
+          <option value="11">jedenastkowym</option>
+          <option value="12">dwunastkowym</option>
+          <option value="13">trzynastkowym</option>
+          <option value="14">czternastkowym</option>
+          <option value="15">piętnastkowym</option>
+          <option value="16">szesnastkowym</option>
+        </select>
+      </div>
+      <button id="convert" onclick="Przelicz()">Przelicz</button>
+    </main>
+    <script src="finalscript.js"></script>
+  </body>
+</html>

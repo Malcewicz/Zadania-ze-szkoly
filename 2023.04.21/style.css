@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-weight: 600;
+  background: linear-gradient(to right top, #000080, #0000e6);
+  background-clip: text;
+  color: transparent;
+  margin-block: 0 1rem;
+}
+
+p {
+  display: inline-block;
+  margin: 0;
+}
+
+#subtitle {
+  margin-block: 0 2rem;
+}
+
+#container,
+#secondContainer {
+  margin-block: 0 2.5rem;
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 8px;
+  border: 2px solid #666;
+}
+
+input[type="text"]:focus {
+  border: 2px solid #0000e6;
+  outline: 1px solid #0000e6;
+}
+
+select {
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 2px solid #0000e6;
+  background-color: inherit;
+  padding: 0.25rem;
+}
+
+button#convert {
+  background: linear-gradient(to right top, #0000b3, #0000e6);
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 30px 10px 30px;
+  margin-block: 0.75rem 0;
+  text-decoration: none;
+}
+
+button#convert:hover {
+  background: linear-gradient(to right top, #1a1aff, #4d4dff);
+  border: none;
+  text-decoration: none;
+}
+
+#output,
+#outputOdwrotnie {
+  font-size: 1.1rem;
+  margin-block: 0.5rem 0;
+  appearance: textfield;
+}
+
+#output:focus,
+#outputOdwrotnie:focus {
+  outline: none;
+}
