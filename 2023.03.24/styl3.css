@@ -1,0 +1,59 @@
+* {
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+h3 {
+  background-color: #546e7a;
+  color: #fff;
+  margin: 0;
+}
+
+h4 {
+  text-align: center;
+  margin: 0;
+}
+
+header {
+  display: flex;
+}
+
+#title,
+#licznik {
+  background-color: #29434e;
+  color: #fff;
+  height: 70px;
+  float: left;
+}
+
+#title {
+  text-align: center;
+  width: 70%;
+}
+
+#licznik {
+  width: 30%;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #b0bec5;
+  height: 320px;
+  overflow: scroll;
+}
+
+section > h3 {
+  width: 100%;
+}
+
+section > div {
+  padding: 5px;
+  width: 226px;
+  height: 280px;
+}
+
+footer {
+  background-color: #29434e;
+  color: #fff;
+}

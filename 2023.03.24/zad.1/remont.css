@@ -1,0 +1,44 @@
+nav {
+  display: flex;
+}
+
+nav > div {
+  background-color: rgb(57, 180, 107);
+  width: 20%;
+  height: 220px;
+  float: left;
+}
+
+nav > div > a {
+  color: white;
+  text-align: center;
+  font-size: 150%;
+}
+
+main {
+  height: 300px;
+}
+
+h1 {
+  color: rgb(27, 163, 82);
+}
+
+#powierzchniaText {
+  display: inline-block;
+}
+
+button {
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+}
+
+footer {
+  background-color: rgb(57, 180, 107);
+  color: white;
+  text-align: center;
+  font-size: 150%;
+  width: 100%;
+}

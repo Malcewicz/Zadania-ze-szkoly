@@ -1,0 +1,36 @@
+article {
+  width: 40%;
+  height: 600px;
+  background-color: #ff8989;
+  float: left;
+}
+aside {
+  width: 60%;
+  height: 600px;
+  background-color: #7872d9;
+  float: left;
+}
+footer {
+  background-color: black;
+  color: white;
+  font-size: 150%;
+  text-align: right;
+}
+table,
+td {
+  margin: 20px;
+  padding: 30px;
+  border-collapse: collapse;
+  border: 2px solid brown;
+  text-align: left;
+}
+button {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid blue;
+  font-size: 20px;
+  background-color: cyan;
+}
+h1 {
+  text-align: center;
+}

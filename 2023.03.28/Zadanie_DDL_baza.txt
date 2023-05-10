@@ -1,0 +1,42 @@
+1. Utwórz bazę o nazwie Szkola
+2. W powyższej bazie utwórz tabelę Uczen zawierającą naztępujące pola:
+	Uczen_id - pole auto numerowane od wartości 100
+	Imie - pole tekstowe o rozmiarze 30 - nie może zawierać wartości null
+	Nazwisko - pole tekstowe o rozmiarze 30
+3. W powyższej bazie utwórz tabelę Klasa zawierającą naztępujące pola:   
+	Klasa_id pole auto numerowane od wartości 1
+	Poziom - wartość numeryczna nie może zawierać wartości null
+	Nazwa = pole tekstowe o rozmiarze 10 - nie może zawierać wartości null
+4. Zmień nazwę pola Nazwa w tabeli Klasa na Nazwa_klasy
+5. Utwórz klucz główny na polu Uczen_id w tabeli Uczen
+6. Utwórz klucz główny na polu Klasa_id w tabeli Klasa
+7. Dodaj do tabeli Uczen pole o nazwie Klasa_id
+8. Utwórz index o nazwie idx_Klasa_id na polu Klasa_id w tabeli Uczen
+9. Zmodyfikuj definicję pola Nazwisko w tabeli Uczen, aby uniemożliwić wprowadzanie do tego pola wartości null
+10. Utwórz klucz obcy o nazwie FK_Klasa_id na polu Klasa_id w tabeli Uczen jako referencję do pola Klasa_id w tabeli Klasa
+11. Ustaw wartość domyślną dla pola Nazwisko w tabeli Uczen na wartość 'Nowak'
+12  Ustaw wartość domyślną dla pola Imie w tabeli Uczen na wartość 'Adam'
+
+
+!! Odpowiedzi !!
+
+1. create database szkola;
+2. create table uczen (
+    -> Uczen_id int not null auto_increment,
+    -> Imie varchar(30) not null,
+    -> Nazwisko varchar(30),
+    -> primary key (Uczen_id));
+3. create table klasa (
+    -> Klasa_id int not null auto_increment,
+    -> Poziom int not null,
+    -> Nazwa varchar(10) not null,
+    -> primary key (Klasa_id));
+4. alter table klasa change column Nazwa Nazwa_klasy varchar(10) not null;
+5. alter table uczen add primary key (Uczen_id);
+6. alter table klasa add primary key (Klasa_id);
+7. alter table uczen add Klasa_id int;
+8. create index idx_Klada_id on klasa(Klasa_id);
+9. alter table uczen modify column Nazwisko varchar(30) not null;
+10. alter table uczen add constraint FK_Klasa_id foreign key (Klasa_id) references Klasa(Klasa_id);
+11. alter table uczen alter Nazwisko set default 'Nowak';
+12. alter table uczen alter Imie set default 'Adam';
