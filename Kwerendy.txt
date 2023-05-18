@@ -1,0 +1,22 @@
+1. Wypisz wszystkie unikalne produkty ( ProductId, ProductName) z tabeli products, które były zamawiane w partiach większych niż 5 sztuk kazdorazowo.
+
+2. Wypisz wszystkich unikalnych klientów ( CustomerID, CustomerName, ContactName) z tabeli customers, którzy składali zamówienia w lipcu 1996 roku.
+
+3. Wypisz unikalną liczbę pracowników ( tabela employees), którzy obsługiwali zamówienia w lipcu 1996 roku.
+
+4. Wypisz wszystkie unikalne produkty ( ProductId, ProductName) z tabeli products, które są z kategorii Condiments
+
+5. Wypisz wszystkich unikalnych klientów ( CustomerID, CustomerName, ContactName) z tabeli customers, którzy składali zamówienia zawierające przynajmniej 3 różna produkty.
+
+
+ODPOWIEDZI:
+
+1. SELECT ProductID, ProductName FROM products WHERE ProductID IN (SELECT ProductID FROM order_details WHERE Quantity>5 GROUP BY ProductID); 
+
+2. SELECT DISTINCT CustomerID, CustomerName, ContactName FROM customers WHERE CustomerID = ANY (SELECT CustomerID FROM orders WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31'); 
+
+3. SELECT Count(EmployeeID) as "Liczba pracowników" FROM employees where EmployeeID IN (SELECT EmployeeID FROM orders where OrderDate BETWEEN '1996-07-01' AND '1996-07-31');
+
+4. SELECT DISTINCT ProductID, ProductName FROM products WHERE CategoryID IN (SELECT CategoryID FROM categories WHERE CategoryName = "Condiments"); 
+
+5. SELECT DISTINCT customers.CustomerID, customers.CustomerName, customers.ContactName from Customers inner join orders on customers.CustomerID=orders.CustomerID where OrderID = any (Select OrderID from order_details GROUP BY OrderID HAVING Count(ProductID)>=3);

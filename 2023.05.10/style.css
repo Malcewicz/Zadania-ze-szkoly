@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -8,49 +8,66 @@
 }
 
 body {
-  background-color: #f9f7f7;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(245, 245, 242), rgb(235, 235, 232));
+}
+
+/* fonts */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* layout */
+
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 header {
   width: 100%;
-  margin-top: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: center;
 }
 
-.container {
-  height: 40vh;
+.flex-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: start;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 1rem;
-  padding-inline: 1rem;
+  gap: 1.5rem;
+  row-gap: 2.5rem;
+  padding-inline: 1.5rem;
 }
 
-.container > section {
-  width: 25%;
-  height: 100%;
+.flex-container > section {
+  max-width: 350px;
+  max-height: 100%;
+  aspect-ratio: 1;
   border-radius: 15px;
-  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0 0 0 / 0.1), 0 5px 12px -4px rgba(0 0 0 / 0.15);
+  transition: box-shadow 200ms ease;
 }
 
-.container > section > img {
+.flex-container > section > img {
   width: 100%;
-  height: 100%;
-  border-radius: 15px;
+  aspect-ratio: 1;
   object-fit: cover;
 }
 
 article {
   max-width: 50%;
   margin-inline: auto;
-  margin-block: 5rem;
+  margin-block: 4rem;
   padding: 1rem 1.5rem 1.5rem;
   text-align: center;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-  background-color: #f1f0f0;
+  box-shadow: 0 4px 20px rgba(0 0 0 / 0.05), 0 5px 12px -4px rgba(0 0 0 / 0.1);
+  background-color: #ffffff;
   border-radius: 15px;
 }
 
@@ -59,9 +76,32 @@ article > h3 {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   padding: 1.5rem;
   text-align: center;
+}
+
+/* actions */
+
+.flex-container > section:hover {
+  box-shadow: 0 5px 20px rgba(0 0 0 / 0.5);
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+  article {
+    order: 1;
+    max-width: 350px;
+    margin: 0.5rem auto 2.5rem;
+  }
+
+  .flex-container {
+    order: 2;
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    order: 3;
+  }
 }
