@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --primary: #ff8400;
+  --secondary: #d0fda5;
+  --accent: #68d105;
+  --background: #fffaeb;
+  --text: #130e01;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+#baner {
+  background: var(--primary);
+  text-align: center;
+  padding: 10px;
+}
+
+#lewy,
+#prawy {
+  padding-inline: 50px;
+}
+
+#lewy,
+#srodkowy {
+  width: 30%;
+  height: 300px;
+  float: left;
+}
+
+#prawy {
+  width: 40%;
+  height: 300px;
+  text-align: right;
+  float: left;
+  overflow: hidden;
+}
+
+#prawy > img {
+  height: 110%;
+  margin-top: -20px;
+  object-fit: contain;
+}
+
+#glowny {
+  padding: 50px;
+  clear: both;
+}
+
+#stopka {
+  background-color: var(--secondary);
+  text-align: center;
+  padding: 20px;
+}
+
+table,
+td,
+th {
+  border: 2px solid var(--primary);
+  padding: 7px;
+  border-collapse: collapse;
+}
+
+input {
+  width: 90px;
+  padding: 5px 7px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+select {
+  width: 90px;
+  margin: 0 15px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+select:focus,
+input:focus {
+  outline: 2px solid var(--accent);
+}
+
+#tekst {
+  width: auto;
+}
+
+button {
+  padding: 5px 30px;
+  margin: 0 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--accent);
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+#red,
+#green,
+#blue {
+  margin: 0 5px;
+  padding: 15px 40px;
+}
+
+#red {
+  background: red;
+}
+
+#green {
+  background: green;
+}
+
+#blue {
+  background: blue;
+}
+
+ul {
+  list-style-type: square;
+}
