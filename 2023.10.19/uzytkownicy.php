@@ -41,7 +41,7 @@ $connect = mysqli_connect("localhost", "root", "", "portal");
     <article id="wizytowka">
       <!-- skrypt 2 -->
       <?php
-      if (isset($_POST['login']) && isset($_POST['haslo'])) {
+      if (isset($_POST['login']) && isset($_POST['haslo']) && $_POST['login']) {
         $login = $_POST['login'];
         $haslo = $_POST['haslo'];
         $query = "SELECT haslo FROM uzytkownicy WHERE login='$login'";
@@ -50,20 +50,20 @@ $connect = mysqli_connect("localhost", "root", "", "portal");
         $haslo = sha1($haslo);
         if ($row == null) {
           echo "<p>login nie istnieje</p>";
+          return;
+        }
+        if ($row[0] == $haslo) {
+          $query = "SELECT login, rok_urodz, przyjaciol, hobby, zdjecie FROM uzytkownicy INNER JOIN dane on uzytkownicy.id = dane.id WHERE login = '$login'";
+          $result = mysqli_query($connect, $query);
+          $row = mysqli_fetch_assoc($result);
+          $wiek = date("Y") - $row['rok_urodz'];
+          echo "<img src='{$row['zdjecie']}' alt='osoba'>";
+          echo "<h4>{$row['login']} ($wiek)</h4>";
+          echo "<p>hobby: {$row['hobby']}</p>";
+          echo "<h1><img src='icon-on.png'> {$row['przyjaciol']}</h1>";
+          echo "<a href='dane.html'><button>Więcej informacji</button></a>";
         } else {
-          if ($row[0] == $haslo) {
-            $query = "SELECT login, rok_urodz, przyjaciol, hobby, zdjecie FROM uzytkownicy INNER JOIN dane on uzytkownicy.id = dane.id WHERE login = '$login'";
-            $result = mysqli_query($connect, $query);
-            $row = mysqli_fetch_assoc($result);
-            $wiek = date("Y") - $row['rok_urodz'];
-            echo "<img src='{$row['zdjecie']}' alt='osoba'>";
-            echo "<h4>{$row['login']} ($wiek)</h4>";
-            echo "<p>hobby: {$row['hobby']}</p>";
-            echo "<h1><img src='icon-on.png'> {$row['przyjaciol']}</h1>";
-            echo "<a href='dane.html'><button>Więcej informacji</button></a>";
-          } else {
-            echo "<p>hasło nieprawidłowe</p>";
-          }
+          echo "<p>hasło nieprawidłowe</p>";
         }
       }
       ?>
@@ -73,6 +73,7 @@ $connect = mysqli_connect("localhost", "root", "", "portal");
     <p>Stronę wykonał: 0021376900</p>
   </footer>
 </body>
+
 <?php
 session_abort();
 mysqli_close($connect);
