@@ -1,0 +1,4 @@
+1 - SELECT id, Nazwa, Opis, Cena FROM zabiegi;
+2 - CREATE USER "salon";
+3 - UPDATE grafik SET Status = "Z" WHERE Id = 15; 
+4 - INSERT INTO `rezerwacja`(`Id_zabieg`, `Id_grafik`) VALUES ('1', '15');
