@@ -1,0 +1,94 @@
+[
+  {
+    "data": [
+      {
+        "id": "1",
+        "rodzina_id": "1",
+        "potrawy_id": "2",
+        "nazwa": "pieczarka dwuzarodnikowa",
+        "potoczna": "pieczarka",
+        "jadalny": "1",
+        "miesiac_zbierania": "0",
+        "nazwa_pliku": "pieczarka.jpg",
+        "opis": "Pieczarka dwuzarodnikowa, naukowo znana jako Agaricus bisporus, to powszechnie uprawiany grzyb jadalny, mający zarówno formę białą (bez skorupiaka) jak i formę brązową (ze skorupiakiem). Oba rodzaje różnią się kolorystyką kapelusza - od białego do brązowego. Jest to grzyb wszechstronny w kuchni, używany w wielu potrawach ze względu na swój delikatny smak i zdolność do absorbowania innych smaków, co sprawia, że stanowi doskonałą bazę dla różnorodnych dań kulinarnej."
+      },
+      {
+        "id": "2",
+        "rodzina_id": "1",
+        "potrawy_id": "2",
+        "nazwa": "czubajka kania",
+        "potoczna": "kania",
+        "jadalny": "1",
+        "miesiac_zbierania": "9",
+        "nazwa_pliku": "kania.jpg",
+        "opis": "Czubajka kania to grzyb z rodziny muchomorowatych, posiadający czerwony kapelusz z białymi plamami lub łuskami, o wyraźnie białym trzonie. Jest to grzyb trujący, który występuje głównie w lasach iglastych i liściastych, będąc jednym z gatunków, które należy ostrożnie odróżniać od grzybów jadalnych ze względu na swoją toksyczność."
+      },
+      {
+        "id": "3",
+        "rodzina_id": "2",
+        "potrawy_id": "4",
+        "nazwa": "borowik szlachetny",
+        "potoczna": "prawdziwek",
+        "jadalny": "1",
+        "miesiac_zbierania": "10",
+        "nazwa_pliku": "borowik.jpg",
+        "opis": "Borowik szlachetny (Boletus edulis) to jeden z najbardziej cenionych i popularnych grzybów jadalnych. Charakteryzuje go duży, mięsisty kapelusz o barwie brązowej do jasnobrązowej, gładka powierzchnia, a także beżowe rurki i biały trzon, czasem z siatkowatym wzorem. Rośnie głównie w lasach iglastych i liściastych, zazwyczaj latem i jesienią. Borowik szlachetny jest doceniany ze względu na swój wyjątkowy smak i mięsistą konsystencję, stanowiąc popularny składnik wielu potraw kuchni europejskiej."
+      },
+      {
+        "id": "4",
+        "rodzina_id": "2",
+        "potrawy_id": "4",
+        "nazwa": "xerocomus",
+        "potoczna": "podgrzybek",
+        "jadalny": "1",
+        "miesiac_zbierania": "10",
+        "nazwa_pliku": "podgrzybek.jpg",
+        "opis": "Podgrzybek to popularny grzyb jadalny o średniej wielkości i charakterystycznym orzechowym, brązowym kapeluszu, pod którym znajdują się białe blaszki. Posiada także gruby, biały trzon, który może mieć delikatny różowy lub czerwonawy odcień u podstawy. Rośnie zwykle w lasach iglastych i liściastych, preferując glebę ubogą w wapń. Jest ceniony za swój łagodny, orzechowy smak oraz mięsistą strukturę, będąc powszechnie używanym składnikiem w wielu kuchniach na całym świecie."
+      },
+      {
+        "id": "5",
+        "rodzina_id": "2",
+        "potrawy_id": "5",
+        "nazwa": "goryczak zolciowy",
+        "potoczna": "szatan",
+        "jadalny": "0",
+        "miesiac_zbierania": "-1",
+        "nazwa_pliku": "szatan.jpg",
+        "opis": "Goryczak żółciowy, znany również jako żółciak olbrzymi (lat. Tylopilus felleus), to grzyb z rodziny Borowikowatych, którego kapelusz osiąga do 30 cm średnicy. Ma charakterystyczną czerwonobrązową barwę z ciemniejszymi plamami i brązowy trzon. Jest niejadalny, ponieważ zawiera substancje wywołujące gorzki smak oraz może powodować reakcje żołądkowe. Występuje głównie w lasach liściastych i iglastych, czasami w górskich obszarach, gdzie rośnie na kwaśnej glebie. Pomimo okazałego wyglądu, nie nadaje się do spożycia."
+      },
+      {
+        "id": "6",
+        "rodzina_id": "3",
+        "potrawy_id": "1",
+        "nazwa": "pieprznik jadalny",
+        "potoczna": "kurka",
+        "jadalny": "1",
+        "miesiac_zbierania": "9",
+        "nazwa_pliku": "kurka.jpg",
+        "opis": "Pieprznik jadalny, znany również jako kurka (lat. Marasmius oreades), to mały grzyb o jasnobrązowym kapeluszu i cienkim trzonie. Posiada charakterystyczny pieprzny smak. Jest ceniony w kuchni ze względu na swój intensywny aromat i nadaje się do suszenia, co pozwala na jego przechowywanie i wykorzystanie w daniach kulinarnych. Pieprznik jadalny rośnie zazwyczaj na trawiastych terenach, często tworząc charakterystyczne pierścienie grzybów. W niektórych kuchniach wykorzystuje się go do przygotowywania potraw, dodając do zup, sosów, czy dań mięsnych, nadając im wyjątkowy smak."
+      },
+      {
+        "id": "7",
+        "rodzina_id": "5",
+        "potrawy_id": "1",
+        "nazwa": "pleurotus",
+        "potoczna": "boczniak",
+        "jadalny": "1",
+        "miesiac_zbierania": "0",
+        "nazwa_pliku": "boczniak.jpg",
+        "opis": "Boczniak, zwany także jako boczniak ostrygowaty (Pleurotus ostreatus), to grzyb jadalny o charakterystycznym kształcie przypominającym muszlę ostrygi. Ma biały, szary lub brązowy kapelusz, a jego trzon jest niewyraźny lub niemal niewidoczny, rosnący na pniach drzew liściastych lub iglastych. Jest popularnym grzybem spożywczym ze względu na delikatny smak i mięsistą konsystencję. Może być spożywany na surowo lub gotowany, często wykorzystywany w różnych kuchniach jako składnik zup, dań mięsnych czy sałatek. Boczniaki są też stosowane w kuchni wegańskiej i wegetariańskiej ze względu na swoje walory smakowe i fakt, że mogą zastępować mięso w niektórych potrawach."
+      },
+      {
+        "id": "8",
+        "rodzina_id": "4",
+        "potrawy_id": "3",
+        "nazwa": "trufla letnia",
+        "potoczna": "trufla",
+        "jadalny": "1",
+        "miesiac_zbierania": "8",
+        "nazwa_pliku": "trufla.jpg",
+        "opis": "Trufla letnia, znana także jako burgundzka trufla (Tuber aestivum), jest jednym z gatunków grzybów podziemnych o wyjątkowo aromatycznym i intensywnym zapachu. Charakteryzuje się czekoladowym lub brązowym kolorem, a zbiera się ją zazwyczaj latem, od czerwca do sierpnia. Jest ceniona w kuchni ze względu na swoje wyrafinowane i subtelne nuty smakowe, które dodają wyjątkowego smaku potrawom, zwłaszcza w kuchni gourmetowej i haute cuisine. Trufla letnia rośnie w symbiozie z korzeniami drzew, zazwyczaj dębów, leszczyn, a także innych drzew liściastych, co sprawia, że jest jednym z najbardziej poszukiwanych skarbów kulinarnych. Jako składnik luksusowych dań, stanowi niezwykłe uzupełnienie potraw, nadając im niepowtarzalny, intensywny smak i aromat."
+      }
+    ]
+  }
+]

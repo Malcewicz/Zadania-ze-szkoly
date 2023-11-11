@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana;
+  margin: 0;
+}
+header {
+  background: Sienna;
+  color: orange;
+  height: 100px;
+  padding-block: 25px;
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: BurlyWood;
+  padding: 40px;
+  height: 90vh;
+  overflow: hidden;
+  gap: 20px;
+}
+main h2 {
+  text-transform: capitalize;
+}
+footer {
+  background: Sienna;
+  color: orange;
+  text-align: center;
+  clear: both;
+}
+img {
+  width: 600px;
+  margin: 7px;
+  padding: 5px;
+  border: 1px solid RosyBrown;
+  display: none;
+}
+img:hover {
+  border-color: Maroon;
+}
+h2,
+p {
+  display: none;
+  max-width: 1000px;
+}

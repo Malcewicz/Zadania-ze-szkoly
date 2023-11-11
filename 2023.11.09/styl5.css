@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana;
+  margin: 0;
+}
+header {
+  background: Sienna;
+  color: orange;
+  height: 100px;
+  padding-block: 25px;
+  text-align: center;
+}
+#lewy,
+#prawy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: BurlyWood;
+  height: 700px;
+  padding: 50px;
+  float: left;
+  width: 50%;
+  overflow: hidden;
+}
+#lewy {
+  align-items: end;
+}
+#prawy {
+  gap: 0.4rem;
+  padding-right: 100px;
+  text-align: justify;
+}
+#prawy h2 {
+  text-transform: capitalize;
+}
+footer {
+  background: Sienna;
+  color: orange;
+  text-align: center;
+  clear: both;
+}
+img {
+  width: 600px;
+  margin: 7px;
+  padding: 5px;
+  border: 1px solid RosyBrown;
+  display: none;
+}
+img:hover {
+  border-color: Maroon;
+}
+h2,
+p {
+  display: none;
+}
