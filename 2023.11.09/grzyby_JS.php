@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $query);
 <head>
 	<meta charset="UTF-8" />
 	<title>Grzybobranie</title>
-	<link rel="stylesheet" href="styl5_copy.css" />
+	<link rel="stylesheet" href="style5_JS.css" />
 </head>
 
 <body>

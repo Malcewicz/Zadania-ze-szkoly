@@ -44,12 +44,7 @@ img {
   margin: 7px;
   padding: 5px;
   border: 1px solid RosyBrown;
-  display: none;
 }
 img:hover {
   border-color: Maroon;
-}
-h2,
-p {
-  display: none;
 }
